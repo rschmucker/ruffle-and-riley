@@ -1,0 +1,220 @@
+/*Formatting for main page.*/
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.main-container {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    padding: 20px;
+    padding-top: 0px;
+    border-right: 2px solid black;
+    flex-grow: 1;
+}
+
+.chat-container-qa {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 20px;
+    padding-top: 0px;
+    border-right: 2px solid black;
+    flex-grow: 1;
+    height: 100vh; /* Set to full height of the viewport */
+    overflow-y: auto; /* Make it scrollable when content overflows */
+  }  
+
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    padding: 10px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.tas-box {
+    color: black;
+    border: 2px solid gray;
+    padding: 10px;
+    overflow-y: auto;
+    flex: 0 0 12%;
+}
+
+.chat-input {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.chat-button {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 15%;
+    background: #0084ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.qa-send_button {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 30%;
+    background: #0084ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.qa-next_button {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 30%;
+    background: #018646;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.qa-done_button {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 30%;
+    background: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+.help-button {
+    background: #4B6DE2;
+    color: white;
+    border-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.wikipedia-container {
+    width: 75%;
+    height: 100%;
+    overflow: auto;
+}
+
+.wikipedia-container-control {
+    width: 75%;
+    height: 100%;
+    margin:0 auto;
+    overflow: auto;
+}
+
+.user-message {
+    margin: 5px 0;
+    padding: 10px;
+    background: #0084ff;
+    color: white;
+    border-radius: 10px;
+    align-self: flex-end;
+    transition: background 0.3s ease; /* for transition */
+}
+
+.gray-bg {  /* related css for background transition */
+    background: gray;
+}
+
+
+.system-message {
+    margin: 5px 0;
+    padding: 10px;
+    background: #018646;
+    color: white;
+    border-radius: 10px;
+    align-self: flex-start;
+    font-weight: 400;
+    box-sizing: content-box;
+    line-height: 1.7rem;
+}
+
+.professor-message {
+    margin: 0px 0;
+}
+
+.professor-alert {
+    margin: 0px 0;
+    color: #B7410E;
+}
+
+.alert-message {
+    margin: 0px 0;
+    color: #B7410E;
+    align-self: flex-start;
+    font-weight: 400;
+    box-sizing: content-box;
+    line-height: 1.7rem;
+}
+
+.parent-input {
+    display: flex; /* or display: inline-flex; */
+}
+
+.parent-vertical {
+    display: flex; /* or display: inline-flex; */
+    flex-direction: column;
+    flex: 1;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.parent-tas {
+    flex: "0 0 20%";
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.parent-input-qa {
+    display: flex; /* or display: inline-flex; */
+    flex-direction: column;
+}
+
+.green-bubble {
+    margin: 10px;
+    margin-left: 0px;
+    padding: 5px;
+    display: inline-block;
+  }
+
+.radio-div {
+    max-width: 80px;
+    text-align: center;
+}

@@ -1,0 +1,60 @@
+html {
+  font-size: 16px; /* Set the root font size */
+  font-family: ProximaNova, Helvetica Neue, Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: none;
+  font-kerning: auto;
+  font-feature-settings: normal;
+  font-language-override: normal;
+  font-size-adjust: none;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-alternates: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-position: normal;
+  font-variation-settings: normal;
+}
+
+
+p {
+  font-weight: 400;
+  box-sizing: content-box;
+  line-height: 1.7rem;
+}
+
+
+.contentarea-wrapper {
+  margin: 0 auto 65px;
+  width: 80%;
+  max-width: 1024px;
+  transition: all 0.3s ease 0s;
+  min-height: calc(-624px + 100vh);
+  padding-top: 1px;
+  padding-left: 0px;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.content_header {
+  margin: 0 auto 0px;
+  width: 80%;
+  width: 1024px;
+  max-width: 1024px;
+}
+
+
+button,
+html,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+hr {
+  width: 100%;
+  margin: 0px 0px 30px;
+  border: 0.5px solid rgb(204, 204, 204);
+}
