@@ -5,10 +5,10 @@ This project implements a tool for LLM-based authoring and orchestration of conv
 <div align="center">
 <figure>
   <img
-    src="misc/system_architecture.jpg"
-    alt="System architecture of Ruffle&Riley."
+    src="misc/UI.png"
+    alt="UI of Ruffle&Riley."
     style="max-width: 800px; height: auto;">
-  <figcaption>System architecture of Ruffle&Riley.</figcaption>
+  <figcaption>User Interface. Users are asked to teach Ruffle (student agent) in a free-form conversation and can request help as needed from Riley (professor agent). The user can navigate the <i>lesson page</i> and learns by teaching the concepts specified in the <i>tutoring script</i>.</figcaption>
 </figure>
 </div>
 
@@ -20,7 +20,7 @@ Follow these steps to get started:
 1. Install node.js and npm using the download from [https://nodejs.org](https://nodejs.org)
 2. Clone and download this repository with `git clone https://github.com/rschmucker/ruffle-and-riley.git`
 3. Navigate into the repository folder and install its dependencies with `npm install`
-4. Copy your OpenAI or Azure OpenAI credentials into `.src/env.js`
+4. Copy your OpenAI or Azure OpenAI credentials into `./src/env.js`
 5. Run the application via `npm start` to run a local deployment
 
 Please reach out to [rschmuck@cs.cmu.edu](mailto:rschmuck@cs.cmu.edu) in case you run into problems or need help with anything.
@@ -28,14 +28,41 @@ Please reach out to [rschmuck@cs.cmu.edu](mailto:rschmuck@cs.cmu.edu) in case yo
 
 ## :pencil: Adding New Lessons
 
+The system can be easily extended with new lessons across various subjects. Adding a new lesson involves setting up a *lesson page* and a corresponding *tutoring script*. The lesson page is a html document that defines the material the user can navigate during the learning activity. The tutoring script defines the questions and associated discussion points the user needs to teach the student agent. To make the set-up process as easy as possible please start by adapting the example lesson:
+
+**Set up the lesson page:**
+* Lesson page definition: Adapt the lesson page specification for the new lesson: ``./src/components/content/eukaryoticCells.js``
+* Configure agents: Copy the raw lesson text into the variable ``eukaryoticCellText`` in the file ``./src/components/content/eukaryoticCellText.js``. This allows the LLM-based agents to keep the conversational learning activity within the scope of the lesson.
+
+**Set up the tutoring script:**
+
+* Tutoring script generation: We illustrate the automated script generation process in a notebook (``./notebooks/question_generation.ipynb``). Copy the raw lesson text into the variable ``LESSON_TEXT`` and run the full notebook. The last code block will output the final tutoring script. 
+* Configure agents: Copy the raw tutoring scrip text into the variable ``eukaryoticCellText`` in the file ``./src/components/content/eukaryoticCellText``.
+
+<div align="center">
 <figure>
   <img
-    src="misc/UI.png"
-    alt="UI of Ruffle&Riley."
+    src="misc/tutoring_script.jpg"
+    alt="Tutoring script."
     style="max-width: 800px; height: auto;">
-  <figcaption>UI of Ruffle&Riley. (a) Learners are asked to teach Ruffle (student agent) in a free-form conversation and request help as needed from Riley (professor agent). (b) The learner can navigate the lesson material during the conversation. (c) Ruffle encourages the learner to explain the content. (d) Riley responds to a help request. (e) Riley detected a misconception and prompts the learner to revise their response.</figcaption>
+  <figcaption>Tutoring Script. To structure conversations, Ruffle\&Riley relies on a pre-generated script featuring a list of questions and expectations for the EMT-based dialog. Tutoring scripts offer instructional designers a convenient interface for system configuration.
+</figcaption>
 </figure>
+</div>
 
+
+<!--
+<div align="center">
+<figure>
+  <img
+    src="misc/system_architecture.jpg"
+    alt="System architecture of Ruffle&Riley."
+    style="max-width: 800px; height: auto;">
+  <figcaption>System architecture of Ruffle&Riley. The system can create a *tutoring script* automatically from existing lesson texts. During the lesson the agents translate the instructional content specified in the tutoring script into a dynamic learning activity.
+</figcaption>
+</figure>
+</div>
+-->
 
 
 ## Citation
@@ -46,12 +73,12 @@ If you use this library please cite our paper:
 
 ```
 @InProceedings{Schmucker2024:Ruffle,
-author="Schmucker, Robin and Xia, Meng and Azaria, Amos and Mitchell, Tom",
-title="Ruffle&Riley: Insights from Designing and Evaluating a Large Language Model-Based Conversational Tutoring System",
-booktitle="Artificial Intelligence in Education",
-year="2024",
-publisher="Springer Nature Switzerland",
-address="Cham",
-pages="75--90"
+  author="Schmucker, Robin and Xia, Meng and Azaria, Amos and Mitchell, Tom",
+  title="Ruffle&Riley: Insights from Designing and Evaluating a Large Language Model-Based Conversational Tutoring System",
+  booktitle="Artificial Intelligence in Education",
+  year="2024",
+  publisher="Springer Nature Switzerland",
+  address="Cham",
+  pages="75--90"
 }
 ```
