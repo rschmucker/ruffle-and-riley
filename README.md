@@ -37,7 +37,7 @@ The system can be easily extended with new lessons across various subjects. Addi
 **Set up the tutoring script:**
 
 * Tutoring script generation: We illustrate the automated script generation process in a notebook (``./notebooks/question_generation.ipynb``). Copy the raw lesson text into the variable ``LESSON_TEXT`` and run the full notebook. The last code block will output the final tutoring script. 
-* Configure agents: Copy the raw tutoring scrip text into the variable ``eukaryoticCellText`` in the file ``./src/components/content/eukaryoticCellText``.
+* Configure agents: Copy the raw tutoring script text from the notebook into the variable ``eukaryoticCellText`` in the file ``./src/components/content/eukaryoticCellText``.
 
 <div align="center">
 <figure>
@@ -45,7 +45,7 @@ The system can be easily extended with new lessons across various subjects. Addi
     src="misc/tutoring_script.jpg"
     alt="Tutoring script."
     style="max-width: 800px; height: auto;">
-  <figcaption>Tutoring Script. To structure conversations, Ruffle\&Riley relies on a pre-generated script featuring a list of questions and expectations for the EMT-based dialog. Tutoring scripts offer instructional designers a convenient interface for system configuration.
+  <figcaption>Tutoring Script. To structure conversations, Ruffle&Riley relies on a pre-generated script featuring a list of questions and expectations for the EMT-based dialog. Tutoring scripts offer instructional designers a convenient interface for system configuration.
 </figcaption>
 </figure>
 </div>
